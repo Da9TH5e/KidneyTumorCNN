@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/c3dc9230ae104022b8eb73a47e5cb965/artifacts
+end_time: 1742473209267
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c3dc9230ae104022b8eb73a47e5cb965
+run_name: stately-shoat-921
+run_uuid: c3dc9230ae104022b8eb73a47e5cb965
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742473180837
+status: 4
+tags: []
+user_id: Debarka
