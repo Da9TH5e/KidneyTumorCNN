@@ -5,6 +5,7 @@ import mlflow.keras
 from urllib.parse import urlparse
 from cnnClassifier.entity.config_entity import EvaluationConfig
 from cnnClassifier.utils.common import read_yaml, create_directories,save_json
+from sklearn.metrics import precision_score, recall_score, f1_score
 
 
 class Evaluation:
@@ -49,7 +50,21 @@ class Evaluation:
         self.save_score()
 
     def save_score(self):
-        scores = {"loss": self.score[0], "accuracy": self.score[1]}
+        y_true = self.valid_generator.classes  # Actual labels
+        y_pred_probs = self.model.predict(self.valid_generator)  # Predicted probabilities
+        y_pred = y_pred_probs.argmax(axis=1)  # Convert probabilities to class labels
+
+        # Compute precision, recall, and F1-score
+        precision = precision_score(y_true, y_pred, average="weighted")
+        recall = recall_score(y_true, y_pred, average="weighted")
+        f1 = f1_score(y_true, y_pred, average="weighted")
+        scores = {
+            "loss": self.score[0], 
+            "accuracy": self.score[1], 
+            "precision": precision, 
+            "recall": recall,
+            "f1_score": f1
+        }
         save_json(path=Path("scores.json"), data=scores)
 
     
