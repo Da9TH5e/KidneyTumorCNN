@@ -22,9 +22,9 @@ Each folder represents a class:
 ## 🔧 Setup
 ```bash
 pip install tensorflow keras numpy matplotlib scikit-learn
-
+```
 🛠️ Training the Model
-
+```bash
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.applications import ResNet50
 from tensorflow.keras import layers, models
@@ -49,35 +49,29 @@ model = models.Sequential([
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 model.fit(train, validation_data=val, epochs=10)
 model.save("kidney_tumor_model.h5")
-
+```
 📈 Results
 
-    Accuracy: ~90% (varies by dataset)
-
-    Misclassifications analyzed via confusion matrix
+  Accuracy: ~90% (varies by dataset)
+  
+  Misclassifications analyzed via confusion matrix
 
 📦 Deployment
 
 The final .h5 model can be:
 
-    Served with Flask/FastAPI
+  Served with Flask/FastAPI
 
-    Deployed to AWS EC2 / Lambda
+  Deployed to AWS EC2 / Lambda
 
-    Integrated in a medical diagnostic support tool
+  Integrated in a medical diagnostic support tool
 
 👥 Team
 
-    A team of 5 members worked on this project.
+  A team of 5 members worked on this project.
 
-    My role: Model optimization + AWS deployment (not completed due to technical issues).
+  My role: Model optimization + AWS deployment (not completed due to technical issues).
 
-📝 License
-
-MIT License
-
-
----
 
 If you want, I can also create:
 ⭐ A longer professional README  
