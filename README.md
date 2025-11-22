@@ -71,9 +71,3 @@ The final .h5 model can be:
   A team of 5 members worked on this project.
 
   My role: Model optimization + AWS deployment (not completed due to technical issues).
-
-
-If you want, I can also create:
-⭐ A longer professional README  
-⭐ Add architecture diagrams, dataset explanation, or metrics  
-⭐ Make it specific to your team + contribution + AWS hosting issue
